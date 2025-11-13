@@ -40,6 +40,10 @@
 				"LinuxArm64",
 				"Android"
 			]
+		},
+		{
+			"Name": "MultiUserClient",
+			"Enabled": true
 		}
 	]
 }
