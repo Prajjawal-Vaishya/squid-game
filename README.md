@@ -8,6 +8,14 @@ This project is a high-fidelity 3D survival simulation developed using **Unreal 
 
 Unlike simple visual recreations, this project focuses on **state management** and **physics-based gameplay interactions** to create a fair but challenging competitive environment.
 
+## 🔗 Project Links
+
+| Platform | Link |
+| :--- | :--- |
+| **itch.io (Playable Build)** | **[Click Here to Play / Download](YOUR_ITCH_IO_LINK_HERE)** |
+| **GitHub (Source Code)** | [View Repository](YOUR_GITHUB_LINK_HERE) |
+| **Video Demo** | [Watch on YouTube](YOUR_YOUTUBE_LINK_HERE) |
+
 ## 🎮 Playable Levels
 
 ### 1. Red Light, Green Light 🔴🟢
@@ -38,11 +46,11 @@ This project serves as a technical showcase for:
 | **Mouse Look** | Camera Control |
 
 ## 🚀 Installation & Setup
-To run this project locally:
+To run this project locally (if not using the itch.io build):
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [YOUR_REPO_LINK]
+    git clone https://github.com/Prajjawal-Vaishya/squid-game/
     ```
 2.  **Generate Project Files:**
     * Navigate to the project folder.
