@@ -1,56 +1,56 @@
-# 🦑 Squid Game: Advanced Physics Simulation
+# 🦑 Squid Game – Unreal Engine 5.6
 
-![Project Banner](https://via.placeholder.com/1200x400?text=Unreal+Engine+5+Simulation)
+![Unreal Engine](https://img.shields.io/badge/Engine-Unreal_5.6-black?style=for-the-badge&logo=unrealengine)
+![Language](https://img.shields.io/badge/Language-C%2B%2B_%26_Blueprints-blue?style=for-the-badge&logo=cplusplus)
+![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows)
+![Status](https://img.shields.io/badge/Status-Prototype-orange?style=for-the-badge)
 
-## 📖 Project Overview
-This project is a technical demonstration of **High-Fidelity Survival Mechanics** built in **Unreal Engine 5**. The goal was to engineer a competitive simulation that relies on **C++ State Management** and **Chaos Physics** rather than simple scripted events.
+A high-fidelity survival mini-game inspired by the *Squid Game* series, developed using **Unreal Engine 5.6**. This project leverages a hybrid architecture of **C++ for core logic** (movement detection, elimination states) and **Blueprints for gameplay flow**.
 
-Aligned with the principles of **Open Innovation**, this project "breaks the code" of standard platformers by implementing:
-* **Vector-Based Movement Detection:** A custom algorithm that calculates player momentum vs. friction to determine elimination, rather than simple input checks.
-* **Procedural Physics Interactions:** Utilizing the Chaos engine to create non-deterministic outcomes for ragdolls and destructible environments.
+## 🎮 Game Modes
 
-## 🔗 Project Links
+### 1. 🟢🔴 Red Light, Green Light
+The classic survival game focusing on precision movement.
+* **Rules:** Move only when the light is Green. Any movement detected during Red Light results in immediate elimination.
+* **Core Mechanics:** * `C++` Movement Velocity Detection (Zero-tolerance logic).
+    * Global Light State Manager (Syncs Audio, Visuals, and Kill Logic).
+    * Finish Line Trigger Zones.
 
-| Platform | Link |
-| :--- | :--- |
-| **itch.io (Playable Build)** | **[Click Here to Play / Download](YOUR_ITCH_IO_LINK_HERE)** |
-| **GitHub (Source Code)** | [View Repository](YOUR_GITHUB_LINK_HERE) |
-| **Video Demo** | [Watch on YouTube](YOUR_YOUTUBE_LINK_HERE) |
-
-## 🎮 Simulation Levels
-
-### 1. The Velocity Protocol (Red Light, Green Light)
-A test of precision and momentum management.
-* **The Innovation:** The "Kill" logic is decoupled from user input. It monitors the `GetVelocity().Size()` of the Pawn. If physics friction fails to stop the character in time (simulating real-world inertia), the player is eliminated.
-* **Tech Stack:** C++ Custom GameState, Chaos Ragdoll Physics.
-
-### 2. The Apex Challenge (Rope Jump)
-A study in dynamic collision and timing.
-* **The Innovation:** Uses interpolating physics constraints to create a variable-speed hazard.
-* **Tech Stack:** Dynamic Collision Primitives, Sine-Wave Interpolation.
-
-## 🛠️ Technical Engineering
-This project highlights advanced usage of Unreal Engine features:
-* **Language:** C++ (Core Gameplay Logic) & Blueprints (Visual Scripting)
-* **Physics Engine:** Chaos Physics (UE5)
-* **Optimization:** Logic ticks are optimized for potential multiplayer replication.
-
-## 🎮 Controls
-
-| Input | Action |
-| :--- | :--- |
-| **W, A, S, D** | Movement Control |
-| **Space Bar** | Jump (Crucial for Level 2) |
-| **Mouse Look** | Camera Control |
-
-## 🚀 Installation & Setup
-1.  **Clone the Repository:**
-    ```bash
-    git clone [YOUR_GITHUB_LINK_HERE]
-    ```
-2.  **Generate Project Files:** Right-click `.uproject` > "Generate Visual Studio project files".
-3.  **Build:** Open `.sln` in Visual Studio > Build for **Development Editor**.
-4.  **Run:** Launch Unreal Engine > Press **Play**.
+### 2. 🪢 Jump Rope
+A timing-based endurance round.
+* **Rules:** Jump over the rotating rope to survive. Touching the rope triggers the Ragdoll physics state.
+* **Core Mechanics:**
+    * Procedural Rotation logic for the rope.
+    * Precise Collision Detection bubbles.
+    * End-level qualification platform.
 
 ---
-*Submitted for Review | Created with Unreal Engine 5*
+
+## 🛠️ Tech Stack & Implementation
+
+| Component | Technology Used | Description |
+| :--- | :--- | :--- |
+| **Game Engine** | **Unreal Engine 5.6** | Utilizing Nanite & Lumen for visuals. |
+| **Core Logic** | **C++** | Used for Movement Component & Game States. |
+| **Scripting** | **Blueprints** | Visual scripting for UI and Animation graphs. |
+| **3D Assets** | **Blender** | Custom props, environment block-outs. |
+| **Animation** | **Mixamo** | Character rigging and locomotion. |
+| **Physics** | **Chaos Physics** | Ragdoll simulation upon elimination. |
+
+---
+
+## 📂 Project Structure
+
+The project maintains a professional modular structure for scalability:
+
+```text
+Content/
+ ├── Blueprints/                 # Game logic, triggers, managers (BP_GameMode, etc.)
+ ├── CR/                         # Custom Round-specific assets
+ ├── Characters/                 # Player and NPC blueprints + skeletons
+ ├── Image/                      # UI assets (Widgets, HUD textures)
+ ├── LevelPrototyping/           # Main Maps (RedLight_Map, JumpRope_Map)
+ ├── Resources/                  # Shared Materials and Sound Cues
+ ├── Sci-Fi_Shots_Pack2/         # Environment modules
+ ├── Weapons/                    # GrenadeLauncher (Experimental mechanics)
+ └── C++ Classes/                # Custom Movement & GameInstance classes
