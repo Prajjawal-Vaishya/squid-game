@@ -1,0 +1,42 @@
+# Unreal Engine required ignores
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vs/
+*.VC.db
+*.sln
+*.sdf
+*.opensdf
+
+# Build files
+Build/
+Builds/
+Plugins/*/Intermediate/
+Plugins/*/Binaries/
+
+# Google Drive temporary files (very important)
+*.tmp
+*.temp
+*.lock
+*~lock*
+*.swp
+*.swx
+.sync*
+.GD*
+.tmp.driveupload/
+.tmp.drivedownload/
+desktop.ini
+
+# Unreal auto-generated
+Content/Collections/
+*_BuiltData.uasset
+
+# Backup & autosave
+Saved/Backup/
+Saved/Autosaves/
+
+# IDE files
+.vscode/
+.idea/
+*.code-workspace
