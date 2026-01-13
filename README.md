@@ -1,51 +1,33 @@
-# 🦑 Squid Game Simulation (Unreal Engine)
+# 🦑 Squid Game Simulation: Unreal Engine Implementation
 
 ![Project Banner](https://via.placeholder.com/1200x400?text=Squid+Game+Simulation+Project)
-*(Note: Replace the link above with a screenshot of your actual game)*
+*(Replace the link above with a screenshot or banner of your actual gameplay)*
 
-## 📖 Project Abstract
-This project is a high-fidelity 3D simulation of the "Squid Game" series, built to demonstrate advanced gameplay programming, state management, and physics interactions within **Unreal Engine**.
+## 📖 Project Overview
+This project is a high-fidelity 3D survival simulation developed using **Unreal Engine**. It recreates the high-stakes atmosphere of *Squid Game* with a focus on realistic physics, precise movement mechanics, and custom C++ logic.
 
-The goal was to move beyond simple visual replication and implement fair, competitive mechanics using C++ and Blueprint scripting.
+Unlike simple visual recreations, this project focuses on **state management** and **physics-based gameplay interactions** to create a fair but challenging competitive environment.
 
-## 🕹️ Playable Levels
+## 🎮 Playable Levels
 
-### 1. Red Light, Green Light
-The core survival mechanic involving precision movement and reaction time.
-* **The Logic:** Instead of simple input checking, the game monitors the player character's **velocity vector**.
-* **The Challenge:** Players must manage their momentum. Stopping input immediately does not guarantee safety if the character is still sliding due to physics friction.
-* **Elimination:** Instant ragdoll physics simulation is triggered upon detection of movement during the "Red Light" state.
+### 1. Red Light, Green Light 🔴🟢
+The classic survival mechanic where precision is critical.
+* **The Logic:** The game uses a custom GameState to control the "Doll" timer and rotation.
+* **Movement Detection:** Instead of relying solely on input presses, the logic monitors the character's **velocity vector**. If the character retains momentum (sliding) after the "Red Light" triggers, they are eliminated.
+* **Death Mechanic:** Triggers a Chaos Physics ragdoll simulation instantly upon elimination.
 
-### 2. Rope Jump
-A physics-based agility challenge requiring timing and rhythm.
-* **The Logic:** Uses dynamic collision detection to simulate a swinging rope.
-* **The Challenge:** The rope speed varies, requiring the player to visually estimate the swing arc and jump apex.
-* **Implementation:** Utilizes precise collision primitives to ensure hit detection is pixel-perfect and fair.
+### 2. The Rope Jump 🪢
+A custom agility level designed to test player timing and depth perception.
+* **The Logic:** Features a physics-driven rotating obstacle (rope) with variable speed.
+* **The Challenge:** Players must time their **Jump** action perfectly to clear the rope's hitbox.
+* **Implementation:** Utilizes precise collision primitives (Capsule/Box components) to ensure hit detection is accurate and responsive.
 
 ## 🛠️ Technical Implementation
-This project showcases the following technical skills:
-
-* **Core Engine:** Unreal Engine 5
-* **Programming:** C++ (Core Logic) & Blueprints (UI/Animation Integration)
-* **Physics:** Chaos Physics Engine (Ragdolls & Collision)
-* **State Management:** Custom GameMode and PlayerController classes to handle round loops, elimination states, and win conditions.
-
-### Key Code Highlight (Conceptual)
-*Implemented a tolerance threshold for movement detection to account for network latency and micro-movements:*
-
-```cpp
-// Pseudocode logic used in the project
-void AMyCharacter::CheckMovement()
-{
-    if (bIsRedLightActive)
-    {
-        float CurrentSpeed = GetVelocity().Size();
-        if (CurrentSpeed > MovementTolerance)
-        {
-            EliminatePlayer();
-        }
-    }
-} 
+This project serves as a technical showcase for:
+* **Engine:** Unreal Engine 5
+* **Core Logic:** Hybrid implementation using **C++** for performance-critical logic (movement, state checks) and **Blueprints** for UI and animation handling.
+* **Physics:** Chaos Physics Engine for ragdolls and collision handling.
+* **Animation:** State Machines (AnimBP) blended with physics interactions.
 
 ## 🎮 Controls
 
@@ -54,3 +36,29 @@ void AMyCharacter::CheckMovement()
 | **W, A, S, D** | Movement Control |
 | **Space Bar** | Jump (Crucial for Level 2) |
 | **Mouse Look** | Camera Control |
+
+## 🚀 Installation & Setup
+To run this project locally:
+
+1.  **Clone the Repository:**
+    ```bash
+    git clone [YOUR_REPO_LINK]
+    ```
+2.  **Generate Project Files:**
+    * Navigate to the project folder.
+    * Right-click the `.uproject` file.
+    * Select **"Generate Visual Studio project files"**.
+3.  **Build:**
+    * Open the solution (`.sln`) file in Visual Studio.
+    * Build for **Development Editor**.
+4.  **Run:**
+    * Launch the project in Unreal Engine.
+    * Press **Play** in the editor.
+
+## 🔮 Future Roadmap
+* **Multiplayer Replication:** Implementing server-authoritative movement for competitive multiplayer.
+* **Level 3 Expansion:** Adding the "Glass Bridge" level using Destructible Meshes.
+* **AI Competitors:** Adding NPC bots with randomized reaction times to race against the player.
+
+---
+*Developed with Unreal Engine*
