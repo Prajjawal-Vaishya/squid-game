@@ -108,7 +108,7 @@ Available Maps
 
 Or play the published web build on itch.io:
 
-[![Play on itch.io](https://img.shields.io/badge/Play_on-itch.io-black?style=for-the-badge&logo=itch-io)](https://YOUR_ITCHIO_URL)
+[![Play on itch.io](https://img.shields.io/badge/Play_on-itch.io-red?style=for-the-badge&logo=itch-io)](https://prajjawal-vaishya.itch.io/still-or-shatter)
 
 🧪 Testing Checklist
 
