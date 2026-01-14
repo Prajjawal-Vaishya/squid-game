@@ -1,6 +1,6 @@
 # Squid Game – Unreal Engine 5.6
 
-<p align="center"> <img src="https://via.placeholder.com/800x400.png?text=Squid+Game+UE5+Project" alt="Game Thumbnail" width="100%"> </p>
+<p align="center"> <img src="https://github.com/Prajjawal-Vaishya/squid-game/blob/main/Thumbnail.jpg" alt="Game Thumbnail" width="100%"> </p>
 
 ![Unreal Engine](https://img.shields.io/badge/Engine-Unreal_5.6-black?style=for-the-badge&logo=unrealengine)
 ![Language](https://img.shields.io/badge/Language-C%2B%2B_%26_Blueprints-blue?style=for-the-badge&logo=cplusplus)
@@ -105,6 +105,10 @@ Available Maps
 2. Go to `Content/LevelPrototyping/`
 3. Open any level
 4. Click Play (▶)
+
+Or play the published web build on itch.io:
+
+[![Play on itch.io](https://img.shields.io/badge/Play_on-itch.io-black?style=for-the-badge&logo=itch-io)](https://YOUR_ITCHIO_URL)
 
 🧪 Testing Checklist
 
